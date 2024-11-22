@@ -2,6 +2,7 @@
 section {
   margin-bottom: 30px; /* Adds space between sections */
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -73,7 +74,9 @@ body {
 .description p {
   font-size: 1.2em;
 }
-
+.description h2{
+  color: #e67e22;
+}
 /* For mobile responsiveness */
 #intro {
   padding: 50px;
@@ -99,9 +102,12 @@ body {
 }
 
 /* Who Am I section */
+
+
 .about-me {
   display: flex;
   align-items: center;
+  color: #ff8c00;
 }
 
 .about-content {
@@ -129,133 +135,55 @@ body {
   height: 40px;
 }
 
-/* General section styling */
-section {
-  margin-bottom: 50px;
-}
-
+/* Services Section */
 #services {
-  display: flex;
-  justify-content: space-around;
-  padding: 40px;
-  background-color: #222222;
-}
-
-#services .service {
+  padding: 40px 20px;
+  background-color: #222;
+  color: #fff;
   text-align: center;
-  width: 30%;
 }
 
-#services h4 {
+#services h3 {
+  font-size: 2em;
   color: #ff8c00;
+  margin-bottom: 30px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* Animation for profile section */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-header h1, header h2, header p, .profile-img, header button {
-  opacity: 0;
-  animation: fadeIn 2s ease forwards;
-}
-
-header h1 {
-  animation-delay: 0.2s;
-}
-
-header h2 {
-  animation-delay: 0.4s;
-}
-
-header p {
-  animation-delay: 0.6s;
-}
-
-.profile-img {
-  animation-delay: 0.8s;
-}
-
-header button {
-  animation-delay: 1s;
-}
-
-#skills li:hover img {
-  transform: scale(1.2);
-  transition: transform 0.3s ease;
+#services .service-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 #services .service {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #333;
+  color: #fff;
   padding: 20px;
   border-radius: 8px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services .service h4 {
+  color: #ff8c00;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+#services .service p {
+  font-size: 1em;
+  line-height: 1.6;
 }
 
 #services .service:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
-
-/* For small to medium screens */
-@media (max-width: 768px) {
-  #services {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #services .service {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .portfolio-item {
-    width: 100%;
-  }
-
-  footer {
-    padding: 20px;
-  }
-
-  .footer-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-buttons a {
-    width: 50%;
-    text-align: center;
-  }
-}
-
-/* For large screens (e.g., laptops/desktops) */
-@media (min-width: 1024px) {
-  .header {
-    height: 100vh; /* Ensures the header takes up full screen */
-  }
-
-  .blurred-image {
-    object-position: top center; /* Ensures the blurred background image is centered and avoids cutting */
-  }
-
-  .profile-img {
-    width: 300px;
-    height: 300px;
-  }
-}
-
+/* Portfolio Section */
 #portfolio {
   padding: 40px;
   background-color: #1b1b1b;
@@ -292,6 +220,7 @@ header button {
   transform: scale(1.05);
 }
 
+/* Contact Section */
 #contact {
   padding: 40px;
   background-color: #222222;
@@ -342,6 +271,7 @@ button:hover {
   background-color: #d35400;
 }
 
+/* Footer */
 footer {
   background-color: #111;
   padding: 40px;
@@ -367,4 +297,47 @@ footer {
 
 .footer-buttons a:hover {
   background-color: #d35400;
+}
+
+/* Responsive Design */
+
+/* For small to medium screens */
+@media (max-width: 768px) {
+  #services .service {
+    width: 80%;
+  }
+
+  .portfolio-item {
+    width: 100%;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  .footer-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-buttons a {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+/* For large screens (e.g., laptops/desktops) */
+@media (min-width: 1024px) {
+  .header {
+    height: 100vh;
+  }
+
+  .blurred-image {
+    object-position: top center;
+  }
+
+  .profile-img {
+    width: 300px;
+    height: 300px;
+  }
 }
